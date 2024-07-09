@@ -3,9 +3,16 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <div>
-            <h1>Youtube Clone</h1>
-        </div>
+        <nav className="flex-div">
+            <div className="nav-left flex-div">
+                <img className="menu-icon" src={menu_icon} alt=""/>
+                <img className="logo" src={logo} alt=""/>
+            </div>
+
+            <div className="nav-middle flex-div">
+
+            </div>    
+        </nav>
     )
 }
 
