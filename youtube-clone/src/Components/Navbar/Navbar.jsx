@@ -10,8 +10,16 @@ const Navbar = () => {
             </div>
 
             <div className="nav-middle flex-div">
-
+                <input type="text" placeholder="Search"/>
+                <img src={search_icon} alt=""/>
             </div>    
+
+            <div className="nav-right flex-div">
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
+            </div> 
         </nav>
     )
 }
