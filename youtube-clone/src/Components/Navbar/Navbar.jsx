@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
-                <img className="menu-icon" src="" alt=""/>
+                <img className="menu-icon" onClick={()=>setSidebar(prev=>prev===false?true:false)} src="" alt=""/>
                 <img className="logo" src="" alt=""/>
             </div>
 
