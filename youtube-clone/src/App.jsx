@@ -3,10 +3,11 @@ import Navbar from "./Components/Navbar/Navbar"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home/Home"
 import Video from "./pages/Video/Video"
+import { useState } from "react"
 
 const App = () => {
 
-const [sidebar, setSidebar] = useState(true)
+const [sidebar, setSidebar] = useState(true);
 
   return (
     <div>
