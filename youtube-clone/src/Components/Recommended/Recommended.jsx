@@ -1,45 +1,42 @@
 import React from 'react'
 import "./Recommended.css"
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { API_KEY } from '../../data'
+import { value_converter } from '../../data'
+import { Link } from 'react-router-dom'
 
-const Recommended = () => {
+const Recommended = ({categoryId}) => {
+
+    const [apiData, setApiData] = useState([]);
+
+    const fetchData = async () => {
+       const relatedVideo_url = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&chart=mostPopular&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
+       await fetch(relatedVideo_url).then(res => res.json()).then(data => setApiData(data.items))
+    }
+
+    useEffect(() => {
+      fetchData();
+    },[])
+
   return (
     <div className='recommended'>
-// Recommended starts here
-        <div className="side-video-list">
-            <img src="" alt="" />
+        {apiData.map((item,index)=>{
+          return(
+            <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="side-video-list">
+            <img src={item.snippet.thumbnails.medium.url} alt="" />
             <div className="video-info">
-                <h4>Best channel to help you be a developer.</h4>
-                <p>Great stack</p>
-                <p>199K views</p>
+                <h4>{item.snippet.title}</h4>
+                <p>{item.snippet.channelTitle}</p>
+                <p>{value_converter(item.statistics.viewCount)} views</p>
             </div>
+            </Link>
+            
+          )
+        })}
         </div>
-        <div className="side-video-list">
-            <img src="" alt="" />
-            <div className="video-info">
-                <h4>Best channel to help you be a developer.</h4>
-                <p>Great stack</p>
-                <p>199K views</p>
-            </div>
-        </div>
-        <div className="side-video-list">
-            <img src="" alt="" />
-            <div className="video-info">
-                <h4>Best channel to help you be a developer.</h4>
-                <p>Great stack</p>
-                <p>199K views</p>
-            </div>
-        </div>
-        <div className="side-video-list">
-            <img src="" alt="" />
-            <div className="video-info">
-                <h4>Best channel to help you be a developer.</h4>
-                <p>Great stack</p>
-                <p>199K views</p>
-            </div>
-        </div>
-// Recommended ends here
-    </div>
-  )
+        )
+        
 }
 
 export default Recommended
