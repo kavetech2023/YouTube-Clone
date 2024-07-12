@@ -1,58 +1,35 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Feed.css"
 import { Link } from "react-router-dom"
+import { API_KEY, value_converter } from "../../data"
+import { useState } from "react"
 
-const Feed = () => {
+const Feed = ({category}) => {
+
+    const [data, setData] = useState([])
+
+    const fetchData = async () => {
+        const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
+        await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items))
+    }
+
+    useEffect(() => {
+        fetchData()
+    },[category])
     return (
         <div className="feed">
-            <Link to={`video/12/2`} className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </Link>    
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="" alt=""/>
-                <h2>Best channel to learn coding </h2>
-                <h3>Great stack</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
+            {data.map((item, index)=> {
+        return(
+            <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+            <img src={item.snippet.thumbnails.medium.url} alt=""/>
+            <h2>{item.snippet.title}</h2>
+            <h3>{item.snippet.channelTitle}</h3>
+            <p> {value_converter(item.statistics.viewCount)}views &bull; 2 days ago</p>
+        </Link>
+
+        )
+    })}
+                
         </div>
     )
 }
