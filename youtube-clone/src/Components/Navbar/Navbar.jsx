@@ -4,13 +4,14 @@ import { useState } from "react"
 import home from "../../assets/home.png"
 import Sidebar from "./Sidebar/Sidebar"
 import { setSidebar } from "react"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
                  <img className="menu-icon" onClick={()=>setSidebar(prev=>prev===false?true:false)} src={home} alt=""/>
-                <img className="logo" src="" alt=""/>
+                <Link to="/"><img className="logo" src={home} alt=""/></Link>
             </div>
 
             <div className="nav-middle flex-div">
