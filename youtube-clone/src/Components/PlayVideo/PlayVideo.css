@@ -116,3 +116,20 @@
     color:#5a5a5a;
     font-size: 14px;
 }
+@media (max-width:900px){
+    .play-video{
+        flex-basis:100%;
+    }
+    .play-video iframe{
+        height: 50vw;
+        width:100%;
+    }
+    .video-description{
+        padding-left:0;
+    }
+    .play-video .play-video-info span{
+        margin-left:0;
+        margin-right:15px;
+        margin-top:15px;
+    }
+}
