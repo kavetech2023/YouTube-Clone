@@ -3,8 +3,11 @@ import "./PlayVideo.css";
 import { useState } from "react";
 import { API_KEY, value_converter } from "../../data.js";
 import moment from "moment";
+import { useParams } from "react-router-dom";
 
-const PlayVideo = ({videoId}) => {
+const PlayVideo = () => {
+
+    const {videoId} = useParams();
 
     const [apiData, setApiData] = useState(null);
     const [channelData, setChannelData] = useState(null);
@@ -27,7 +30,7 @@ const PlayVideo = ({videoId}) => {
     }
     useEffect(() => {
         fetchVideoData()
-    },[])
+    },[videoId])
 
     useEffect(() => {
         fetchChannelData()
@@ -62,16 +65,14 @@ const PlayVideo = ({videoId}) => {
                     {commentData.map((item,index)=>{
                         return(
                             <div key={index} className="comment">
-                            <img src="" alt="" />
+                            <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
                             <div>
-                                <h3>Jack Nickelson <span>1 day ago</span></h3>
+                                <h3>{item.snippet.topLevelComment.snippet.authorDisplayName} <span>1 day ago</span></h3>
                                     
-                                    <p>A global computer network providing a variety of information about
-                                        business, culture, sports, science, and miscellaneous other subjects,
-                                        access to the World Wide Web, and email.</p>
+                                    <p>{item.snippet.topLevelComment.snippet.textDisplay}</p>
                                         <div className="comment-action">
                                         <img src="" alt="" />
-                                        <span>244</span>
+                                        <span>{value_converter(item.snippet.topLevelComment.snippet.likeCount)}</span>
                                         <img src="" alt="" /> 
                                         </div>              
                                 </div>
