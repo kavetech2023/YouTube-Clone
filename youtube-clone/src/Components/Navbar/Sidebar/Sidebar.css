@@ -20,6 +20,10 @@
     flex-wrap: wrap;
     cursor:pointer;
 }
+.side-link p{
+    font-size:14px;
+    color:#5a5a5a;
+}
 .side-bar hr{
     border:0;
     height:1px;
@@ -48,4 +52,8 @@
 .small-sidebar hr{
     width:50%;
     margin-bottom:25px;
+}
+.side-link.active img{
+    padding-bottom:2px;
+    border-bottom:3px solid red;
 }
