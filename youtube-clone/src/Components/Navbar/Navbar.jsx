@@ -1,11 +1,15 @@
 import React from "react"
 import "./Navbar.css"
+import { useState } from "react"
+import home from "../../assets/home.png"
+import Sidebar from "./Sidebar/Sidebar"
+import { setSidebar } from "react"
 
 const Navbar = () => {
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
-                 <img className="menu-icon" onClick={()=>setSidebar(prev=>prev===false?true:false)} src="" alt=""/>
+                 <img className="menu-icon" onClick={()=>setSidebar(prev=>prev===false?true:false)} src={home} alt=""/>
                 <img className="logo" src="" alt=""/>
             </div>
 
