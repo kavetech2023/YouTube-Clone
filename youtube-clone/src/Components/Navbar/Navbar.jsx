@@ -3,10 +3,11 @@ import "./Navbar.css"
 import { useState } from "react"
 import home from "../../assets/home.png"
 import Sidebar from "./Sidebar/Sidebar"
-import { setSidebar } from "react"
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
-const Navbar = () => {
+
+const Navbar = ({setSidebar}) => {
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
