@@ -1,14 +1,17 @@
 import react from "react"
 import "./Sidebar.css"
-import home from "../../../assets/home.png"
-import game_icon from "../../../assets/home.png"
-import automobiles from "../../../assets/home.png"
+import { IoHome } from "react-icons/io5";
+import { SiYoutubegaming } from "react-icons/si";
+import { FaCarSide } from "react-icons/fa6";
+import { MdOutlineSportsSoccer } from "react-icons/md";
+import { MdLocalMovies } from "react-icons/md";
+import { GiMaterialsScience } from "react-icons/gi";
+import { IoIosMusicalNotes } from "react-icons/io";
+import { IoPeopleSharp } from "react-icons/io5";
+import { LuNewspaper } from "react-icons/lu";
+
 import sports from "../../../assets/home.png"
-import entertainment from "../../../assets/home.png"
-import tech from "../../../assets/home.png"
-import music from "../../../assets/home.png"
-import blogs from "../../../assets/home.png"
-import news from "../../../assets/home.png"
+
 
 
 const Sidebar = ({sidebar,category,setCategory}) => {
@@ -17,39 +20,39 @@ const Sidebar = ({sidebar,category,setCategory}) => {
           <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <div className="shortcut-links">
                 <div className={`side-link ${category===0?"active":""}`} onClick={()=>setCategory(0)}>
-                    <img src={home} alt=""/>
+                <span> <IoHome color="red" size={20}/></span>
                     <p>Home</p>
                 </div>
                 <div className={`side-link ${category===20?"active":""}`} onClick={()=>setCategory(20)}>
-                    <img src={home} alt=""/>
+                <span><SiYoutubegaming color="red" size={20}/></span>
                     <p>Gaming</p>
                 </div>
                 <div className={`side-link ${category===2?"active":""}`} onClick={()=>setCategory(2)}>
-                    <img src={home} alt=""/>
+                    <span><FaCarSide color="red" size={20}/></span>
                     <p>Automobiles</p>
                 </div>
                 <div className={`side-link ${category===17?"active":""}`} onClick={()=>setCategory(17)}>
-                    <img src={home} alt=""/>
+                    <span><MdOutlineSportsSoccer color="red" size={20}/></span>
                     <p>Sports</p>
                 </div>
                 <div className={`side-link ${category===24?"active":""}`} onClick={()=>setCategory(24)}>
-                    <img src={home} alt=""/>
+                    <span><MdLocalMovies color="red" size={20}/></span>
                     <p>Entertainment</p>
                 </div>
                 <div className={`side-link ${category===28?"active":""}`} onClick={()=>setCategory(28)}>
-                    <img src={home} alt=""/>
+                    <span><GiMaterialsScience color="red" size={20}/></span>
                     <p>Sci & Tech</p>
                 </div>
                 <div className={`side-link ${category===10?"active":""}`} onClick={()=>setCategory(10)}>
-                    <img src={home} alt=""/>
+                    <span><IoIosMusicalNotes color="red" size={20}/></span>
                     <p>Music</p>
                 </div>
                 <div className={`side-link ${category===22?"active":""}`} onClick={()=>setCategory(22)}>
-                    <img src={home} alt=""/>
+                    <span><IoPeopleSharp color="red" size={20}/></span>
                     <p>People & Blogs</p>
                 </div>
                 <div className={`side-link ${category===25?"active":""}`} onClick={()=>setCategory(25)}>
-                    <img src={home} alt=""/>
+                    <span><LuNewspaper color="red" size={20}/></span>
                     <p>News</p>
                 </div>  
                 <hr/>
@@ -57,16 +60,16 @@ const Sidebar = ({sidebar,category,setCategory}) => {
                 <div className="subscribed-list">
                     <h3>Subscribed</h3>
                     <div className="side-link">
-                        <img src={home} alt=""/>
-                        <p>Home</p>
+                        <img src={sports} alt=""/>
+                        <p>sports</p>
                     </div>
                     <div className="side-link">
-                        <img src={home} alt=""/>
-                        <p>Home</p>
+                        <img src={sports} alt=""/>
+                        <p>sports</p>
                     </div>
                     <div className="side-link">
-                        <img src={home} alt=""/>
-                        <p>Home</p>
+                        <img src={sports} alt=""/>
+                        <p>sports</p>
                     </div>
                 </div>
             </div>
