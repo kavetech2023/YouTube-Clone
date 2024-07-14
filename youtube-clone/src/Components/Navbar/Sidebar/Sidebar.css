@@ -12,6 +12,10 @@
     width:30px;
     margin-right:20px;
 }
+.shortcut-links span{
+    width:30px;
+    margin-right:20px;
+}
 .side-link{
     display: flex;
     align-items: center;
@@ -53,10 +57,11 @@
     width:50%;
     margin-bottom:25px;
 }
-.side-link.active img{
+.side-link.active span{
     padding-bottom:2px;
     border-bottom:3px solid red;
 }
+
 @media (max-width:900px){
     .side-bar{
         display:none;
