@@ -39,7 +39,7 @@ const PlayVideo = () => {
 
     return (
         <div className="play-video">
-            <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} controls autoPlay muted></iframe>
+            <iframe className="new-iframe" src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} controls autoPlay muted></iframe>
             <h3>{apiData?apiData.snippet.title:"Title here"}</h3>
          <div className="play-video-info">
             <p>{apiData?value_converter(apiData.statistics.viewCount):"100K"} Views &bull; {moment(apiData?apiData.snippet.publishedAt:"").fromNow()}</p>
