@@ -20,39 +20,39 @@ const Sidebar = ({sidebar,category,setCategory}) => {
           <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <div className="shortcut-links">
                 <div className={`side-link ${category===0?"active":""}`} onClick={()=>setCategory(0)}>
-                <span> <IoHome color="red" size={20}/></span>
+                <span> <IoHome size={20}/></span>
                     <p>Home</p>
                 </div>
                 <div className={`side-link ${category===20?"active":""}`} onClick={()=>setCategory(20)}>
-                <span><SiYoutubegaming color="red" size={20}/></span>
+                <span><SiYoutubegaming size={20}/></span>
                     <p>Gaming</p>
                 </div>
                 <div className={`side-link ${category===2?"active":""}`} onClick={()=>setCategory(2)}>
-                    <span><FaCarSide color="red" size={20}/></span>
+                    <span><FaCarSide  size={20}/></span>
                     <p>Automobiles</p>
                 </div>
                 <div className={`side-link ${category===17?"active":""}`} onClick={()=>setCategory(17)}>
-                    <span><MdOutlineSportsSoccer color="red" size={20}/></span>
+                    <span><MdOutlineSportsSoccer  size={20}/></span>
                     <p>Sports</p>
                 </div>
                 <div className={`side-link ${category===24?"active":""}`} onClick={()=>setCategory(24)}>
-                    <span><MdLocalMovies color="red" size={20}/></span>
+                    <span><MdLocalMovies size={20}/></span>
                     <p>Entertainment</p>
                 </div>
                 <div className={`side-link ${category===28?"active":""}`} onClick={()=>setCategory(28)}>
-                    <span><GiMaterialsScience color="red" size={20}/></span>
+                    <span><GiMaterialsScience size={20}/></span>
                     <p>Sci & Tech</p>
                 </div>
                 <div className={`side-link ${category===10?"active":""}`} onClick={()=>setCategory(10)}>
-                    <span><IoIosMusicalNotes color="red" size={20}/></span>
+                    <span><IoIosMusicalNotes  size={20}/></span>
                     <p>Music</p>
                 </div>
                 <div className={`side-link ${category===22?"active":""}`} onClick={()=>setCategory(22)}>
-                    <span><IoPeopleSharp color="red" size={20}/></span>
+                    <span><IoPeopleSharp size={20}/></span>
                     <p>People & Blogs</p>
                 </div>
                 <div className={`side-link ${category===25?"active":""}`} onClick={()=>setCategory(25)}>
-                    <span><LuNewspaper color="red" size={20}/></span>
+                    <span><LuNewspaper size={20}/></span>
                     <p>News</p>
                 </div>  
                 <hr/>
