@@ -25,17 +25,17 @@ nav{
     border-radius:25px;
 }
 
-nav-middle .search-box input{
+.nav-middle .search-box input{
     border:none;
     outline:none;
     background:transparent;
     width:400px;
 }
 
-.nav-middle .search-box img{
+.nav-middle .search-box span{
     width:15px;
 }
-.nav-right img{
+.nav-right span{
     width:25px;
     margin-right:25px;
 }
