@@ -7,6 +7,16 @@
 }
 .card img{
     border-radius:5px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+.card img:hover{
+    box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.75);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 .card h2{
     font-size:16px;
