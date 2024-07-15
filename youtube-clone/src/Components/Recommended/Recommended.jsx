@@ -2,8 +2,7 @@ import React from 'react'
 import "./Recommended.css"
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { API_KEY } from '../../data'
-import { value_converter } from '../../data'
+import { API_KEY, value_converter } from '../../data'
 import { Link } from 'react-router-dom'
 
 const Recommended = ({categoryId}) => {
