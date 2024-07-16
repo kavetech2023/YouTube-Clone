@@ -21,13 +21,13 @@
 .card h2{
     font-size:16px;
     font-weight:600;
-    color:#000;
+    color:var(--h2-color);
     margin:5px 0;
 }
 .card h3{
     font-size:14px;
     font-weight:600;
-    color:#555;
+    color:var(--h3-color);
     margin:6px 0;
     cursor:pointer
 }
@@ -35,7 +35,9 @@
     color:red;
 }
 .card p{
-    font-size:14px;
+    font-size:14px;color: var(--h3-color)
+
+
 }
 body.active-modal {
     overflow-y: hidden;
@@ -88,4 +90,10 @@ body.active-modal {
     border-radius: 3px;
     max-width: 600px;
     min-width: 300px;
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
 }

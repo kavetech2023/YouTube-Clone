@@ -15,6 +15,7 @@ const Feed = ({category}) => {
   //Modal start
 const [modal, setModal] = useState(true);
 const [moreInfoData, setMoreInfoData] = useState(null);
+const [isLoadingMoreInfo, setIsLoadingMoreInfo] = useState(false);
 
 const toggleModal = () => {
   setModal(!modal);
