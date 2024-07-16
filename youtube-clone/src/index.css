@@ -1,3 +1,23 @@
+:root{
+    --body-background: #f9f9f9;
+    --title:black;
+    --primary:blue;
+}
+[data-theme="dark"]{
+    --body-background: #121212;
+    --title:white;
+    --h2-color:white;
+    --h3-color:#555;
+    --primary:red;
+}
+[data-theme="light"]{
+    --body-background: #f9f9f9;
+    --title:#555;
+    --h2-color:black;
+    --h3-color:#555;
+    --primary:blue;
+}
+
 *{
     margin: 0;
     padding: 0;
