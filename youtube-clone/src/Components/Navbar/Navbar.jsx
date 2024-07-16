@@ -3,16 +3,23 @@ import "./Navbar.css"
 import { useState } from "react"
 import { CgDetailsMore } from "react-icons/cg";
 import { FaYoutube } from "react-icons/fa6";
-import { FaUpload } from "react-icons/fa6";
-import { IoNotifications } from "react-icons/io5";
+import { BsToggle2Off } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
-import home from "../../assets/home.png"
+import home from "../../assets/profile.jpg"
 import Sidebar from "./Sidebar/Sidebar"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
 
 const Navbar = ({setSidebar}) => {
+
+    const switchTheme = (e) => {
+        if(e.target.checked){
+            document.querySelector("body").setAttribute("data-theme","dark")
+    }else{
+        document.querySelector("body").setAttribute("data-theme","light")
+    }}
+
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
@@ -29,8 +36,12 @@ const Navbar = ({setSidebar}) => {
             </div>    
 
             <div className="nav-right flex-div">
-                <span><FaUpload size={25}/></span>
-                <span><IoNotifications size={25}/></span>
+                <span>
+<label class="switch">
+  <input type="checkbox" onChange={switchTheme}/>
+  <span className="slider round"></span>
+</label></span>
+                
                 <img src={home} alt=""className="user-icon"/>
             </div> 
         </nav>
