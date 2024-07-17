@@ -4,4 +4,4 @@
 
 # Technologies used
 
-###React, Vite, 
+### React, Vite, 
