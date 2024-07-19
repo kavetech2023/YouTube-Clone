@@ -9,16 +9,18 @@ const Recommended = ({categoryId}) => {
 
     const [apiData, setApiData] = useState([]);
 
+    // Fetching Recoomended Videos from Youtube API
     const fetchData = async () => {
        const relatedVideo_url = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&chart=mostPopular&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
        await fetch(relatedVideo_url).then(res => res.json()).then(data => setApiData(data.items))
     }
-
+    // Fetching Data on Component Mount
     useEffect(() => {
       fetchData();
     },[])
 
   return (
+    // Display Recommended Videos in a list
     <div className='recommended'>
         {apiData.map((item,index)=>{
           return(
