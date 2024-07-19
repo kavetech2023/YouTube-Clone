@@ -16,6 +16,7 @@ import sports from "../../../assets/home.png"
 
 const Sidebar = ({sidebar,category,setCategory}) => {
     return (
+        // Display Sidebar with Shortcut Links
         <div>
           <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <div className="shortcut-links">
