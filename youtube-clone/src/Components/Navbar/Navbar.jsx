@@ -10,9 +10,11 @@ import Sidebar from "./Sidebar/Sidebar"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
-
+// const [sidebar, setSidebar] = useState(false)
 const Navbar = ({setSidebar}) => {
+ 
 
+    // Function to switch between light and dark theme
     const switchTheme = (e) => {
         if(e.target.checked){
             document.querySelector("body").setAttribute("data-theme","dark")
@@ -34,9 +36,10 @@ const Navbar = ({setSidebar}) => {
                 </div>
                 
             </div>    
-
+            
             <div className="nav-right flex-div">
                 <span>
+                    
 <label class="switch">
   <input type="checkbox" onChange={switchTheme}/>
   <span className="slider round"></span>
