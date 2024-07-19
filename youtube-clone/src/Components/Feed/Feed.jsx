@@ -37,17 +37,16 @@ const handleMoreInfo = async (channelTitle) => {
     }
   };
 
-
-
-
-
+    
     const [data, setData] = useState([])
 
+    // Fetching Videos Data from Youtube API
     const fetchData = async () => {
         const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
         await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items))
     }
-
+    
+    // Fetching Data on Component Mount
     useEffect(() => {
         fetchData()
     },[category])
@@ -57,21 +56,24 @@ const handleMoreInfo = async (channelTitle) => {
 <div onClick={toggleModal} className="overlay"></div>
 <div className="modal-content">
   <h2>Welcome to Youtube with Gemini Ai</h2>
-  <p>
-            {moreInfoData ? (
+  <p>       
+             
+            {
+            // Display the processed data if available, or a default message if not
+            moreInfoData ? (
               <span dangerouslySetInnerHTML={{ __html: moreInfoData }} /> // Safely render processed HTML
             ) : (
               "No additional information available yet"
             )}
           </p>
   <button className="close-modal" onClick={toggleModal}>
-
     CLOSE
   </button>
 </div>
 </div>
 
             {data.map((item, index)=> {
+              // Display Video Card
         return(
             <div className="card" key={item.id}>
             <Link to={`video/${item.snippet.categoryId}/${item.id}`} >
