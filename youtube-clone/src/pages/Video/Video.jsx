@@ -5,7 +5,7 @@ import Recommended from "../../Components/Recommended/Recommended"
 import { useParams } from "react-router-dom"
 
 const Video = () => {
-
+    // Fetching Video ID and Category ID from URL
     const  {videoId, categoryId} = useParams()
     return (
         <div className="play-container">
