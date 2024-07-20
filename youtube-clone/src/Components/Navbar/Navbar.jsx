@@ -10,10 +10,10 @@ import Sidebar from "./Sidebar/Sidebar"
 import { Link } from "react-router-dom"
 import { useEffect } from "react"
 
+
+
 // const [sidebar, setSidebar] = useState(false)
 const Navbar = ({setSidebar}) => {
- 
-
     // Function to switch between light and dark theme
     const switchTheme = (e) => {
         if(e.target.checked){
@@ -21,6 +21,8 @@ const Navbar = ({setSidebar}) => {
     }else{
         document.querySelector("body").setAttribute("data-theme","light")
     }}
+
+
 
     return (
         <nav className="flex-div">
@@ -31,16 +33,23 @@ const Navbar = ({setSidebar}) => {
 
             <div className="nav-middle flex-div">
                 <div className="search-box flex-div">
-                <input type="text" placeholder="Search"/>
+                <input type="text" placeholder="Search"
+                />
                 <span><FaSearch /></span>
                 </div>
-                
+               {/* Conditionally render search results */}
+        
+          <ul className="search-results">
+            
+              <li></li>
+          </ul>
+
             </div>    
             
             <div className="nav-right flex-div">
                 <span>
                     
-<label class="switch">
+<label className="switch">
   <input type="checkbox" onChange={switchTheme}/>
   <span className="slider round"></span>
 </label></span>
