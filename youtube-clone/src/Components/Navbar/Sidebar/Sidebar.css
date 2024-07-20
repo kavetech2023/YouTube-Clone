@@ -29,7 +29,10 @@
 }
 .side-link p{
     font-size:14px;
-    color:#5a5a5a;
+    color:var(--h2-color);
+}
+.side-link .side-icon{
+    fill:var(--h3-color);
 }
 .side-bar hr{
     border:0;
