@@ -41,7 +41,7 @@ const Sidebar = ({sidebar,category,setCategory}) => {
                     <p>Entertainment</p>
                 </div>
                 <div className={`side-link ${category===28?"active":""}`} onClick={()=>setCategory(28)}>
-                    <span><GiMaterialsScience size={20}/></span>
+                    <span><GiMaterialsScience className="side-icon" size={20}/></span>
                     <p>Sci & Tech</p>
                 </div>
                 <div className={`side-link ${category===10?"active":""}`} onClick={()=>setCategory(10)}>
@@ -49,7 +49,7 @@ const Sidebar = ({sidebar,category,setCategory}) => {
                     <p>Music</p>
                 </div>
                 <div className={`side-link ${category===22?"active":""}`} onClick={()=>setCategory(22)}>
-                    <span><IoPeopleSharp size={20}/></span>
+                    <span><IoPeopleSharp className="side-icon" size={20}/></span>
                     <p>People & Blogs</p>
                 </div>
                 <div className={`side-link ${category===25?"active":""}`} onClick={()=>setCategory(25)}>
