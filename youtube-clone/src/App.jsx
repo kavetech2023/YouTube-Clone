@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home/Home"
 import Video from "./pages/Video/Video"
 import { useState } from "react"
-import dotenv from 'dotenv';
 
 const App = () => {
 
