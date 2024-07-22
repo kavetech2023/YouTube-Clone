@@ -15,7 +15,8 @@ const Feed = ({category}) => {
   //Modal start
 const [modal, setModal] = useState(true);
 const [moreInfoData, setMoreInfoData] = useState(null);
-const [isLoadingMoreInfo, setIsLoadingMoreInfo] = useState(false);
+
+
 
 const toggleModal = () => {
   setModal(!modal);
@@ -28,6 +29,7 @@ const [resultData, setResultData] = useState([]);
 const handleMoreInfo = async (channelTitle) => {
     setModal(true);
     try {
+      // Process the data with the Gemini API using the 
       const processedData = await run("Explain to me " + channelTitle + "on youtube very briefly");
       setMoreInfoData(processedData);
       
@@ -55,7 +57,7 @@ const handleMoreInfo = async (channelTitle) => {
 <div className={`modal ${modal ? "show" : ""}`}>
 <div onClick={toggleModal} className="overlay"></div>
 <div className="modal-content">
-  <h2>Welcome to Youtube with Gemini Ai</h2>
+  <h2>Description by Gemini Ai</h2>
   <p>       
              
             {
@@ -63,7 +65,7 @@ const handleMoreInfo = async (channelTitle) => {
             moreInfoData ? (
               <span dangerouslySetInnerHTML={{ __html: moreInfoData }} /> // Safely render processed HTML
             ) : (
-              "No additional information available yet"
+              "Loading..."
             )}
           </p>
   <button className="close-modal" onClick={toggleModal}>
@@ -72,7 +74,7 @@ const handleMoreInfo = async (channelTitle) => {
 </div>
 </div>
 
-            {data.map((item, index)=> {
+            {data.map((item)=> {
               // Display Video Card
         return(
             <div className="card" key={item.id}>
