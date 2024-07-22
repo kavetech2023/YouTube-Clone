@@ -59,7 +59,7 @@ Contributions to the YouTube Clone with Gemini AI project are welcome! To contri
 
 ## App Screenshots:
 
-!["Gemini Ai loaded"](screenshots/Youtube clone screenshot.png)
+!["Gemini Ai screenshot"](screenshots/Youtube_clone_screenshot.png)
 
 !["Darkmode screenshot"](screenshots/darkmode-screen-shot.png)
 
