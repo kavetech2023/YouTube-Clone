@@ -1,4 +1,4 @@
-# Project Name: YouTube Clone with Gemini AI
+# YouTube Clone with Gemini AI
 
 ## Introduction:
 
