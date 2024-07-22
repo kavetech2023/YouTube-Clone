@@ -19,7 +19,7 @@ const Navbar = ({setSidebar}) => {
         if(e.target.checked){
             document.querySelector("body").setAttribute("data-theme","dark")
     }else{
-        document.querySelector("body").setAttribute("data-theme","light")
+    document.querySelector("body").setAttribute("data-theme","light")
     }}
 
 

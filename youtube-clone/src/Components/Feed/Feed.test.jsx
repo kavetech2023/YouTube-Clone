@@ -5,7 +5,8 @@ import Feed from "./Feed";
 it("renders with a specific category", () => {
     const category = "music";
     render(<Feed category={category} />);
-    // Add assertions to check if the component renders correctly with the specified category
+    const { getByText } = render(<Feed category={category} />);
+    expect(getByText(category)).toBeInTheDocument();
 });
 
 it("renders with an empty category", () => {
