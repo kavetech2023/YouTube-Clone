@@ -1,4 +1,4 @@
-# YouTube Clone with Gemini AI
+# YouTube Clone x Gemini AI
 
 ## Introduction:
 
@@ -23,7 +23,7 @@ To install and run YouTube Clone with Gemini AI locally, follow these steps:
 
 2. Navigate to the project directory:
     ```
-    cd youtube-clone-geminiai
+    cd YouTube-Clone
     ```
 
 3. Install the dependencies:
