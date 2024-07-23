@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-YouTube Clone with Gemini AI is a web application that replicates the functionality of YouTube, enhanced with Gemini AI's advanced channels information system. Users can watch, and interact with videos, while Gemini AI provides channel information, like a mini wikipedia.
+YouTube Clone with Gemini AI is a web application that replicates the functionality of YouTube, enhanced with Gemini AI. Users can watch, and interact with videos, while Gemini AI provides channel information, like a mini wikipedia.
 
 ## Deployed Site:
 
