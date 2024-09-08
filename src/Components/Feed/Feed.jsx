@@ -13,7 +13,7 @@ import run from "../../config/gemini.js"
 const Feed = ({category}) => {
 
   //Modal start
-const [modal, setModal] = useState(true);
+const [modal, setModal] = useState(false);
 const [moreInfoData, setMoreInfoData] = useState(null);
 
 

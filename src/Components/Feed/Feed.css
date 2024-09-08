@@ -45,7 +45,7 @@ body.active-modal {
 
 .btn-modal {
     padding: 10px 20px;
-    display: block;
+    display: none;
     margin: 100px auto 0;
     font-size: 18px;
 }
