@@ -64,6 +64,7 @@ const Feed = ({ category }) => {
                 "Loading..."
               )
             }
+            
           </p>
           <p>
             <span className="infospan">#Networth</span> 
