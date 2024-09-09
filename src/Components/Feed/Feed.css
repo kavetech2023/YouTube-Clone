@@ -74,7 +74,8 @@ body.active-modal {
     color: blueviolet;
     cursor: pointer;
     margin-right: 10px;
-    
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; 
   }
 
   

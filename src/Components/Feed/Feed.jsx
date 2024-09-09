@@ -31,6 +31,8 @@ const Feed = ({ category }) => {
     }
   };
 
+
+
   const [data, setData] = useState([]);
 
   // Fetching Videos Data from Youtube API
@@ -64,9 +66,9 @@ const Feed = ({ category }) => {
             }
           </p>
           <p>
-            <span className="infospan">Networth</span> 
-            <span className="infospan">Similar channels</span>
-            <span className="infospan">Kind of videos</span>
+            <span className="infospan">#Networth</span> 
+            <span className="infospan">#Similar channels</span>
+            <span className="infospan">#Kind of videos</span>
           </p>
           <button className="close-modal" onClick={toggleModal}>
             CLOSE
